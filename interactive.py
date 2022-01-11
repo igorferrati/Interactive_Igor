@@ -4,7 +4,7 @@ from Funções import frase, titulo
 
 contagem = 0
 idade = date.today().year - (1993 + 1)  #aniversário em fev, 28 anos.
-# PROGRAMA
+# PROGRAMA - CURRÍCULO INTERATIVO
 titulo('Currículo Interativo', 6)
 
 # BANCO DE DADOS
@@ -14,13 +14,16 @@ dados_pessoais = {'Nome:': 'Igor Ferrati Leite',
                   'GitHub:': 'https://github.com/igorferrati',
                   'LinkedIn:': 'https://www.linkedin.com/in/igor-ferrati-leite-b5212422a/'
                   }
-experiencia_prof = {'empresa6': ['Assistente de Projetos', 'PHL Construções a Seco', 'Fev.2020/Jul.2021'],
+
+experiencia_prof = {'empresa7': ['Gerenciador de Projetos', 'Afine', 'Mai.2021/Out.2021'],
+                    'empresa6': ['Assistente de Projetos', 'PHL Construções a Seco', 'Fev.2020/Jul.2021'],
                     'empresa5': ['Vendedor Sênior', 'Decathlon Brasil', 'Set.2018/Fev.2020'],
                     'empresa4': ['Desenhista Cadista', 'CEPLAM Engenharia', 'Mai.2017/Set.2018'],
                     'empresa3': ['Projetista CAD', 'PA Engenharia', 'Jul.2016/Mai.2017'],
                     'empresa2': ['Estagiário de Projetos', 'Prefeitura de São Paulo', 'Jul.2014/Jul.2016'],
                     'empresa1': ['Estagio', 'Instituto Florestal', 'Jul.2013/Mai.2014'],
                     }
+
 formacao = {'Udemy': {'Python, Projetos Avançados':
                           ['-Tratativas de erros',
                            '- Boas práticas e organização de código',
@@ -43,6 +46,7 @@ formacao = {'Udemy': {'Python, Projetos Avançados':
                                   'Análise e retorno de informações',
                                   'Conclusão: 2021.']
                              },
+
             'Udemy ': {'Lógica de Pogramação':
                            ['Introdução a linguagens e IDE;',
                             'Desenvolvimento de exercícios básico e lógicos;',
@@ -80,31 +84,34 @@ formacao = {'Udemy': {'Python, Projetos Avançados':
 while True:
     frase('Processando', 6)
     resp = validaint('Digite uma opção: ')
+    
     if resp == 1:
         for k, v in dados_pessoais.items():
             print('\033[7:40m', end='')
             print(f'{k:.<13} {v:.<80}')
+
     elif resp == 2:
         print('\033[7:40m', end='')
         print(f'{"Empresas:":.<}{"Cargo/Func.": >32}{"Período:":>43}')
         for ke, ve in experiencia_prof.items():
             sleep(0.5)
             print(f'{ve[1]:.<30}{ve[0]:.<30}{ve[2]:.>33}')
+
     elif resp == 3:
         print('\033[7:40m', end='')
         print(f'{" Objetivos ! ":_^94} ')
-        print('Adquitir experiência profissional no campo da tecnologia, ingressar no mercado como'
-              'desenvolvedor,\nprogramador e/ou áreas relacionadas.Foco em dados, bigdata, learnmachine, BI, etc.')
+        print('Atuar profissionalmente como desenvolvedor/programador\nIniciar uma pós-graduação no âmbito da tecnologia')
         print('_'*94)
         print('Pontos de desenvolvimento para obejtivo:')
         sleep(1)
-        print('[1] - Estudo no âmbito da tecnologia')
+        print('- Estudo no âmbito da tecnologia')
         sleep(0.5)
-        print('[2] - Desenvolver próprios códigos')
+        print('- Desenvolver projetos para exercícios')
         sleep(0.5)
-        print('[3] - Experiência profissional')
+        print('- Experiência profissional')
         sleep(0.5)
-        print('[4] - Iniciar uma pós-graduação')
+        print('- Iniciar uma pós-graduação')
+
     elif resp == 4:
         print('\033[7:40m', end='')
         print(f'{"Graduação completa: Arquitetura e Urbanismo - 2016":<94}')
@@ -117,6 +124,7 @@ while True:
                     print(topicos)
                 print('_' * 94)
                 sleep(1)
+
     elif resp == 5:
         second = 0
         print('\033[7:40m', end='')
@@ -130,6 +138,7 @@ while True:
         print()
         print(f'{"* * * Programa Finalizado * * *":^94}')
         break
+
     else:
         print('\033[7:40m', end='')
         print('Erro, digite uma opção válida.')
