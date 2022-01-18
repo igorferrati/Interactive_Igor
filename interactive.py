@@ -1,6 +1,6 @@
 from time import sleep
 from datetime import date
-from Funções import frase, titulo
+from Funções import espera, frase, titulo, validaint, c
 
 contagem = 0
 idade = date.today().year - (1993 + 1)  #aniversário em fev, 28 anos.
